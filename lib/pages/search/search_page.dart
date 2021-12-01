@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_api/main.dart';
 import 'package:poke_api/others/exit_button.dart';
 import 'package:poke_api/others/menu.dart';
 import 'package:poke_api/others/theme_button.dart';
@@ -24,19 +25,21 @@ class _SearchPageState extends State<SearchPage> {
           //=====LINHAS========
           Row(
             children: <Widget>[
-              Spacer(),
-              Container(
+              const Spacer(),
+              const SizedBox(
                 width: 90,
                 height: 2,
-                color: Colors.white,
               ),
-              Spacer(),
-              Spacer(),
-              Container(width: 90, height: 2, color: Colors.black),
-              Spacer(),
-              Spacer(),
-              Container(width: 90, height: 2, color: Colors.white),
-              Spacer(),
+              const Spacer(),
+              const Spacer(),
+              Container(
+                  width: 90,
+                  height: 2,
+                  color: theme == darkTheme ? Colors.white : Colors.black),
+              const Spacer(),
+              const Spacer(),
+              const SizedBox(width: 90, height: 2),
+              const Spacer(),
             ],
           ),
           //===========CAIXA DE PESQUISA============
@@ -63,10 +66,16 @@ class _SearchPageState extends State<SearchPage> {
               ],
             ),
             child: TextFormField(
+              style: const TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 hintText: 'Procure por pokémons',
+                hintStyle: const TextStyle(color: Colors.black),
                 suffixIcon: IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.search_sharp)),
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.search_sharp,
+                      color: Colors.grey.shade400,
+                    )),
               ),
             ),
           ),

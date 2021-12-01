@@ -14,12 +14,30 @@ import 'package:poke_api/pages/search/search_page.dart';
 import 'pages/login/login_page.dart';
 
 void main() => runApp(const MyApp());
+var theme = lightTheme;
 
-class MyApp extends StatelessWidget {
+var darkTheme = ThemeData(
+  brightness: Brightness.dark,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+);
+
+var lightTheme = ThemeData(
+  brightness: Brightness.light,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+);
+
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: theme,
         debugShowCheckedModeBanner: false,
         title: 'Poke API',
         initialRoute: '/loginPage',

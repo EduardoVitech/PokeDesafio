@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_api/main.dart';
 import 'package:poke_api/others/exit_button.dart';
 import 'package:poke_api/others/menu.dart';
 import 'package:poke_api/others/theme_button.dart';
@@ -31,19 +32,18 @@ class _FavoritePageState extends State<FavoritePage> {
               Container(
                 width: 90,
                 height: 2,
-                color: Colors.black,
+                color: theme == darkTheme ? Colors.white : Colors.black,
               ),
-              Spacer(),
-              Spacer(),
-              Container(width: 90, height: 2, color: Colors.white),
-              Spacer(),
-              Spacer(),
-              Container(
+              const Spacer(),
+              const Spacer(),
+              const SizedBox(width: 90, height: 2),
+              const Spacer(),
+              const Spacer(),
+              const SizedBox(
                 width: 90,
                 height: 2,
-                color: Colors.white,
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
           //==========IMAGEM==========

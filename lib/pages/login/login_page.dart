@@ -92,8 +92,10 @@ class LoginPage extends StatelessWidget {
                   },
                   controller: _EmailImputControler,
                   keyboardType: TextInputType.emailAddress,
+                  style: const TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                     hintText: 'Email',
+                    hintStyle: TextStyle(color: Colors.black),
                   ),
                 ),
               ),
@@ -129,8 +131,10 @@ class LoginPage extends StatelessWidget {
                   },
                   controller: _PasswordImputControler,
                   obscureText: true,
+                  style: const TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                     hintText: 'Senha',
+                    hintStyle: TextStyle(color: Colors.black),
                   ),
                 ),
               ),

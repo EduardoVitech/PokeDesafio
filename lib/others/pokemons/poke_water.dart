@@ -69,6 +69,7 @@ class _PokemonsWaterState extends State<PokemonsWater> {
             child: const Text(
               "Wartortle",
               style: TextStyle(
+                color: Colors.black,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_api/main.dart';
 import 'package:poke_api/others/exit_button.dart';
 import 'package:poke_api/others/menu.dart';
 import 'package:poke_api/others/pokemons/poke.dart';
@@ -27,23 +28,23 @@ class _AllPageState extends State<AllPage> {
         //=====LINHAS========
         //Utilizadas pra fazer a marcação
         //embaixo dos botões
-
-        //=====BOTÕES DE FILTRAGEM=====
         Row(
           children: <Widget>[
-            Spacer(),
-            Container(
+            const Spacer(),
+            const SizedBox(
               width: 90,
               height: 2,
-              color: Colors.white,
             ),
-            Spacer(),
-            Spacer(),
-            Container(width: 90, height: 2, color: Colors.white),
-            Spacer(),
-            Spacer(),
-            Container(width: 90, height: 2, color: Colors.black),
-            Spacer(),
+            const Spacer(),
+            const Spacer(),
+            const SizedBox(width: 90, height: 2),
+            const Spacer(),
+            const Spacer(),
+            Container(
+                width: 90,
+                height: 2,
+                color: theme == darkTheme ? Colors.white : Colors.black),
+            const Spacer(),
           ],
         ),
         Container(
@@ -52,7 +53,7 @@ class _AllPageState extends State<AllPage> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  //=====BOTÃO TODOS OS TIPOS=====
+                  //=====BOTÕES DE FILTRAGEM=====
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.only(bottom: 20),

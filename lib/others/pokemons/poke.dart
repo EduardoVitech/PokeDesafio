@@ -68,6 +68,7 @@ class _PokenosState extends State<Pokemons> {
             child: const Text(
               "Pikachu",
               style: TextStyle(
+                color: Colors.black,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
